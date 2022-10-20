@@ -148,7 +148,7 @@ app.get("/districts/:districtId/details/", async (request, response) => {
         WHERE district_id = ${districtId};
     `;
   const state = await database.get(getStateNameQuery);
-  response.send({ stateName: state.stateName });
+  response.send({ stateName: state.state_name });
 });
 
 module.exports = app;
